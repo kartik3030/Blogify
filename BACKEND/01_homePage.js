@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // To get the homepage
 app.get("/blogify", (req, res) => {
-    res.sendFile((path.join(__dirname, "../FRONTEND/01_index.html")))
+    res.sendFile((path.join(__dirname, "../FRONTEND/index.html")))
 })
 
 // To get the particular page
