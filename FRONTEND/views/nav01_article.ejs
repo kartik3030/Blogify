@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- npx @tailwindcss/cli -i ./FRONTEND/input.css -o ./FRONTEND/output.css --watch -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="../01_style.css">
+    <link rel="stylesheet" href="../output.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="fixed top-0 w-97 sm:w-full z-10 bg-white">
+            <ul class=" flex justify-between items-end ">
+                <div class="flex gap-x-7 ">
+                    <div class="logo ml-5 flex items-center">
+                        <li>
+                            <a href="/blogify"><span class="Blogify font-bold text-2xl sm:text-4xl">Blogify</span></a>
+                        </li>
+                    </div>
+                    <div class="gap-x-10 ml-25 article-text hidden sm:flex sm:items-end">
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/article">Articles</a> </li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/podcast">Podcast</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/writer">Be a writer</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/chat">Talk to us</a></li>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mr-5 nav-search items-center">
+                    <li><input type="search" placeholder="Search Here" class="search p-1 w-30 sm:w-100 hidden border-2">
+                    </li>
+                    <li><span class="material-symbols-outlined search-icon">
+                            search
+                        </span></li>
+                    <li class="sm:hidden menu-btn"><span class="material-symbols-outlined">
+                            menu
+                        </span></li>
+                    <li class="signin hidden sm:block nav"><a href="/blogify/signin">Sign in</a></li>
+
+                </div>
+
+            </ul>
+
+
+        </nav>
+        <div class="article-text h-300 w-90 mt-8 text-end  list-none menu-list hidden bg-neutral-50">
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/article">Articles</a> </li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/podcast">Podcast</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/writer">Be a writer</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/chat">Talk to us</a></li>
+            <li class="signin nav text-3xl font-bold mt-7"><a href="/blogify/signin">Sign in</a></li>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="mt-20">
+        <h1 class=" text-4xl sm:text-7xl font-bold m-10 recent-article recent-article hover:text-cyan-500">Recent
+            Article
+        </h1>
+        <section class="ml-5 article1 sm:flex justify-end hidden">
+            <div class="bg-neutral-100 w-60 sm:w-100 rounded-3xl sm:p-2">
+                <p class="text-3xl font-bold">Effortlessly discover your skincare essentials</p>
+                <p class="mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, delectus.
+                </p>
+                <button class="border-2 p-5 rounded-xl ml-15 sm:ml-30 mt-40 bg-black text-white">Find
+                    article</button>
+                <p class="ml-15 mt-10">Related: Bodycare Serums Cleanser</p>
+            </div>
+        </section>
+
+        <section class="article-img w-85 m-5 h-100 sm:hidden">
+            <p class="text-3xl font-bold ml-10">Enjoy New Articles</p>
+            <button class="w-50 border-2 border-black p-3 rounded-lg ml-15 mt-70 bg-neutral-300">Find Article</button>
+        </section>
+
+        <h2 class="text-4xl sm:text-7xl font-bold ml-10 mt-10 latest-article hover:text-emerald-600">Latest Articles
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 ml-10 mt-10 gap-5 mr-10 latest-article ">
+            <% arr.forEach(blog=> { %>
+                <section
+                    class="gap-x-3 sm:grid-cols-2 bg-neutral-50 rounded-3xl p-4 hover:bg-neutral-400 hover:shadow-2xl art article-click"
+                    data-id="<%= blog.id %>">
+                    <img src="/images/<%= blog.filename %>" alt="img" class="rounded-xl min-h-30 max-h-30   max-w-45 ">
+                    <div>
+                        <p class="text-2xl font-bold">
+                            <%= blog.title %>
+                        </p>
+                        <p>
+                            <%= blog.textarea %>
+                        </p>
+                        <p class="mt-10 font-bold">
+                            <%= blog.author %>
+                        </p>
+                    </div>
+                </section>
+                <% }) %>
+        </div>
+    </main>
+    <footer class="sm:flex mt-10 m-5 gap-0.5 ">
+        <div class="bg-amber-800 w-80 sm:w-1/2 sm:h-100 rounded-2xl p-2">
+            <p class=" sm:text-4xl font-mono font-bold text-amber-200">Blogify</p>
+            <p class="sm:mt-10 sm:text-3xl">Subscribe for exclusive offers</p>
+            <p class="text-white sm:mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sunt quis
+                obcaecati
+                voluptatibus,
+                pariatur neque consequatur nobis alias explicabo non nemo saepe harum tempora. Autem quibusdam sed iusto
+                laborum reiciendis.</p>
+            <form action="http://localhost:3000/subscriber" method="post" class="sm:ml-35 mt-10">
+
+                <input type="email" name="email" placeholder="Your Email"
+                    class="text-white p-1 sm:p-8 rounded-xl font-bold border-2 hover:bg-neutral-500">
+                <button class="p-1 sm:p-8 rounded-xl font-bold border-2 bg-pink-700 text-white">Submit</button>
+
+            </form>
+        </div>
+        <div class=" sm:w-1/2 h-100 flex gap-18 sm:gap-50 justify-center mt-20 bg-neutral-50">
+            <div>
+                <p class=" font-bold">Support</p>
+                <ul>
+                    <li class="hover:text-neutral-400">Help center</li>
+                    <li class="hover:text-neutral-400">Contact us</li>
+                    <li class="hover:text-neutral-400">Terms of use</li>
+                    <li class="hover:text-neutral-400">Suppliments</li>
+                </ul>
+            </div>
+            <div>
+                <p class=" font-bold">About</p>
+                <ul>
+                    <li class="hover:text-neutral-400">Blog</li>
+                    <li class="hover:text-neutral-400">Review</li>
+                    <li class="hover:text-neutral-400">Testimonial</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="/views/nav01_article.js"></script>
+</body>
+
+</html>

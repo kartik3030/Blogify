@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- npx @tailwindcss/cli -i ./FRONTEND/input.css -o ./FRONTEND/output.css --watch -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify</title>
+    <link rel="stylesheet" href="./01_style.css">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="fixed top-0 w-97 sm:w-full z-10 bg-white">
+            <ul class=" flex justify-between items-end ">
+                <div class="flex gap-x-7 ">
+                    <div class="logo ml-5 flex items-center">
+                        <li>
+                            <a href="/blogify"><span class="Blogify font-bold text-2xl sm:text-4xl">Blogify</span></a>
+                        </li>
+                    </div>
+                    <div class="gap-x-10 ml-25 article-text hidden sm:flex sm:items-end">
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/article">Articles</a> </li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/podcast">Podcast</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/writer">Be a writer</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/chat">Talk to us</a></li>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mr-5 nav-search items-center">
+                    <li><input type="search" placeholder="Search Here" class="search p-1 w-30 sm:w-100 hidden border-2">
+                    </li>
+                    <li><span class="material-symbols-outlined search-icon">
+                            search
+                        </span></li>
+                    <li class="sm:hidden menu-btn"><span class="material-symbols-outlined">
+                            menu
+                        </span></li>
+                    <li class="signin hidden sm:block nav"><a href="/blogify/signin">Sign in</a></li>
+
+                </div>
+
+            </ul>
+
+
+        </nav>
+        <div class="article-text h-300 w-90 mt-8 text-end  list-none menu-list hidden bg-neutral-50">
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/article">Articles</a> </li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/podcast">Podcast</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/writer">Be a writer</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/chat">Talk to us</a></li>
+            <li class="signin nav text-3xl font-bold mt-7"><a href="/blogify/signin">Sign in</a></li>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="mt-15">
+        <!-- Page 1 -->
+        <div class="page1 sm:flex sm:justify-around">
+
+            <!-- First page Section -->
+            <div class=" main1 ">
+                <!-- heading -->
+                <div>
+                    <h1 class=" text-4xl sm:text-7xl font-bold ml-10  sm:mt-10 best-week hover:text-cyan-800">
+                        Best of the Week
+                    </h1>
+                </div>
+
+                <!-- blog cards -->
+                <section
+                    class="card w-87 sm:w-250 sm:h-130 h-50 ml-3  sm:ml-10 mt-5 sm:mt-10 rounded-2xl hover:shadow-2xl mainBanner">
+                    <div>
+                        <span class="card-text">Sept 06,2025</span>
+                        <span class="card-text-2">~Travel</span>
+                    </div>
+                    <div>
+                        <p
+                            class=" bg-transparent text-white  sm:text-5xl font-extrabold  sm:ml-90 mt-25 sm:mt-70 w-fit">
+                            Get to your dream destination with Travel Pro
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+            <div class="main2">
+                <!-- section 2 -->
+                <div>
+                    <section class="section2 ml-3 sm:ml-0 mt-3 sm:mt-0 rounded-xl green-box add_2 hover:shadow-2xl">
+                        <p class="text-2xl sm:text-3xl font-bold ml-2">Become a brodcasting member</p>
+                        <p class="sm:text-2xl ml-2 mt-3">Real talk in a corporate world</p>
+                        <div class="flex justify-between m-2 mt-37">
+                            <p>Learn More</p>
+                            <span class=" material-symbols-outlined border-2 rounded-md bg-white ">add_2
+                            </span>
+                        </div>
+
+                    </section>
+
+                    <!-- section3 -->
+                    <section class=" ml-3 sm:ml-0 model mt-5 green-box hover:shadow-2xl">
+                        <p class=" bg-white p-3 rounded-xl ml-25  w-fit mt-60 ">See all picks</p>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Page 2 -->
+        <div class="flex ml-10 mt-15">
+            <h3 class="text-7xl font-bold category hover:text-emerald-900">Category</h3>
+        </div>
+        <!-- Slide show of cards -->
+
+        <section class="flex sm:justify-between  mt-5 items-center">
+            <span class="material-symbols-outlined border-2 rounded-lg h-fit sm:ml-5 p-2 sm:p-8 left-arrow">
+                arrow_left_alt </span>
+
+            <div class="hidden sm:block blog-card hover:shadow-2xl">
+                <span>~Lifestyle</span>
+            </div>
+            <div class="blog-card2 h-80 sm:h-100 m-2 sm:m-0 w-70 sm:w-100 hover:shadow-2xl">
+                <span>~Entertainment</span>
+            </div>
+            <div class="hidden sm:block blog-card3 hover:shadow-2xl">
+                <span>~Personal</span>
+            </div>
+
+
+            <span class="material-symbols-outlined border-2 h-fit p-2 sm:mr-5 sm:p-8 right-arrow">
+                arrow_forward </span>
+        </section>
+
+
+    </main>
+    <footer class="mt-10">
+        <div>
+            <h1 class="text-4xl sm:text-7xl font-bold  ml-5 sm:ml-110">
+                <span class="hover:text-amber-400">
+                    Join
+                </span>
+                <span class="hover:text-blue-700">
+                    Our
+                </span>
+                <span class="hover:text-pink-900">
+                    BroadCast
+                </span>
+            </h1>
+        </div>
+        <div class="images flex gap-x-3  ml-5 sm:ml-137 m-4 ">
+            <img src="https://wallpapers.com/images/hd/aesthetic-pictures-sgs8cfn6mldtpwto.jpg" alt="img" width="100"
+                class="rounded-2xl">
+            <img src="https://i.pinimg.com/originals/8a/5a/71/8a5a716aa6e86e09eda8ee9fae5b1ea6.png" alt="img"
+                width="100" class="rounded-2xl">
+            <img src="https://wallpapers.com/images/file/aesthetic-art-pictures-5sg07pp3uf4yl425.jpg" alt="img"
+                width="100" class="rounded-2xl">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.aEDEMEvxl7gebR4D30MizAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="img" width="100" class="rounded-2xl hidden sm:block">
+        </div>
+        <div class="footer ml-5 mr-5 mb-10 rounded-xl">
+            <p class="w-fit text-5xl text-white font-bold ml-15 sm:ml-154">Join Now</p>
+            <form action="http://localhost:3000/blogify" method="post" class="sm:ml-100 mt-10 sm:flex">
+                <div class="sm:flex sm:gap-x-4">
+                    <input type="text" name="name" placeholder="Your Name"
+                        class="sm:text-white p-3 ml-15 sm:p-8 rounded-xl font-bold border-2 border-amber-900 hover:bg-neutral-600">
+                    <input type="email" name="email" placeholder="Your Email"
+                        class="sm:text-white p-3 ml-15 sm:ml-0 sm:p-8 rounded-xl font-bold border-2  border-amber-900 hover:bg-neutral-100 hover:text-black">
+                </div>
+                <button
+                    class="ml-30 sm:ml-0 mt-3 sm:mt-0 p-3 sm:p-8 rounded-xl font-bold border-2 bg-pink-700 text-white hover:bg-red-700">Submit</button>
+
+            </form>
+            <hr class="sm:text-white mt-20 h-fit hidden sm:block">
+
+            <div class="flex sm:justify-between mt-5">
+                <span class="text-white hover:text-amber-900 ml-3">We wish to make you a good experience</span>
+                <a href="./navbarRoutes/nav04_chat.html">
+                    <button class="text-white rounded-2xl border-2 mb-2 p-1 bg-black hover:bg-amber-600 mr-3">Contact
+                        us</button>
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+    <script src="01_main.js"></script>
+</body>
+
+</html>

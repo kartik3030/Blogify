@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- npx @tailwindcss/cli -i ./FRONTEND/input.css -o ./FRONTEND/output.css --watch -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast</title>
+    <link rel="stylesheet" href="../01_style.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- nav -->
+    <header>
+        <nav class="fixed top-0 w-97 sm:w-full z-10 bg-white">
+            <ul class=" flex justify-between items-end ">
+                <div class="flex gap-x-7 ">
+                    <div class="logo ml-5 flex items-center">
+                        <li>
+                            <a href="/blogify"><span class="Blogify font-bold text-2xl sm:text-4xl">Blogify</span></a>
+                        </li>
+                    </div>
+                    <div class="gap-x-10 ml-25 article-text hidden sm:flex sm:items-end">
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/article">Articles</a> </li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/podcast">Podcast</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/writer">Be a writer</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/chat">Talk to us</a></li>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mr-5 nav-search items-center">
+                    <li><input type="search" placeholder="Search Here" class="search p-1 w-30 sm:w-100 hidden border-2">
+                    </li>
+                    <li><span class="material-symbols-outlined search-icon">
+                            search
+                        </span></li>
+                    <li class="sm:hidden menu-btn"><span class="material-symbols-outlined">
+                            menu
+                        </span></li>
+                    <li class="signin hidden sm:block nav"><a href="/blogify/signin">Sign in</a></li>
+
+                </div>
+
+            </ul>
+
+
+        </nav>
+        <div class="article-text h-300 w-90 mt-8 text-end  list-none menu-list hidden bg-neutral-50">
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/article">Articles</a> </li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/podcast">Podcast</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/writer">Be a writer</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/chat">Talk to us</a></li>
+            <li class="signin nav text-3xl font-bold mt-7"><a href="/blogify/signin">Sign in</a></li>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <h1 class="mt-20 ml-10 text-4xl sm:text-7xl font-bold trending-podcast hover:text-fuchsia-900">Trending Podcast
+        </h1>
+        <div class="sm:flex">
+            <div class="podcast w-fit mt-10 ml-15 sm:ml-5">
+                <p class="hidden sm:block text-5xl font-extrabold ml-55 text-emerald-950">The Generation of Tech</p>
+                <span class="material-symbols-outlined bg-white rounded-2xl p-5 sm:ml-230 mt-90">
+                    play_arrow </span>
+            </div>
+            <div class="grid gap-y-2">
+                <p class="text-3xl font-bold ml-20">See More Podcast</p>
+
+                <section
+                    class="flex gap-2  bg-neutral-50 rounded-3xl p-2 ml-7  sm:p-4 sm:mr-10 hover:bg-fuchsia-200 w-80 sm:w-fit">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.RdEePLpdUOUT4NlV-010DAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="img" class="rounded-xl max-w-25 sm:max-w-50">
+                    <div>
+                        <p class="sm:text-2xl font-bold">MetaVerse</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, voluptatum?</p>
+                        <p class="mt-10 font-bold">Tech</p>
+                    </div>
+                </section>
+
+                <section
+                    class="flex gap-2  bg-neutral-50 rounded-3xl p-2 ml-7  sm:p-4 sm:mr-10 hover:bg-fuchsia-200 w-80 sm:w-fit">
+                    <img src="https://www.forestessentialsindia.com/blog/wp-content/uploads/2021/12/1-1.jpg" alt="img"
+                        class="rounded-xl max-w-25 sm:max-w-50">
+                    <div>
+                        <p class="sm:text-2xl font-bold">Skincare</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, voluptatum?</p>
+                        <p class="mt-10 font-bold">Beauty</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <div class="flex mt-20 ml-10 items-end justify-between m-5">
+            <h1 class="font-bold text-4xl sm:text-7xl new-release hover:text-amber-800">New Realase</h1>
+            <p>See more</p>
+        </div>
+        <div class="new-release grid grid-cols-2 gap-y-5 gap-x-2 sm:flex m-5">
+            <section class="sm:ml-5 border-2 border-neutral-200 w-fit p-1 hover:bg-neutral-400 art">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.e2DhV1mLk5l3tbamdCK0TgHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="img" width="250" class="min-h-45 sm:min-h-90">
+                <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                <p>author</p>
+            </section>
+            <section class="sm:ml-5 border-2 border-neutral-200 w-fit p-1 hover:bg-neutral-400 art">
+                <img src="https://bookoftheday.org/wp-content/uploads/2023/12/600x900bb-17.png" alt="img" width="250"
+                    class="min-h-45 sm:min-h-90">
+                <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                <p>author</p>
+            </section>
+            <section class="sm:ml-5 border-2 border-neutral-200 w-fit p-1 hover:bg-neutral-400 art">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.iHzWdREaGk9lJXtXkWTB5QHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="img" width="250" class="min-h-45 sm:min-h-90">
+                <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                <p>author</p>
+            </section>
+            <section class="sm:ml-5 border-2 border-neutral-200 w-fit p-1 hover:bg-neutral-400 art">
+                <img src="https://m.media-amazon.com/images/I/91o5XZwQnhL.jpg" alt="img" width="250"
+                    class="min-h-45 sm:min-h-90">
+                <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                <p>author</p>
+            </section>
+            <section class="sm:ml-5 border-2 border-neutral-200 w-fit p-1 hover:bg-neutral-400 art">
+                <img src="https://m.media-amazon.com/images/I/815phxYRsVL.jpg" alt="img" width="250"
+                    class="min-h-45 sm:min-h-90">
+                <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                <p>author</p>
+            </section>
+            <section class="sm:ml-5 border-2 border-neutral-200 w-fit p-1 hover:bg-neutral-400">
+                <img src="https://sanfranciscobookreview.com/wp-content/uploads/demon_copperhead.jpg" alt="img"
+                    width="250" class="min-h-45 sm:min-h-90">
+                <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                <p>author</p>
+            </section>
+        </div>
+    </main>
+    <footer class="sm:flex mt-10 m-5 gap-0.5 ">
+        <div class="bg-amber-800 w-80 sm:w-1/2 sm:h-100 rounded-2xl p-2">
+            <p class=" sm:text-4xl font-mono font-bold text-amber-200">Blogify</p>
+            <p class="sm:mt-10 sm:text-3xl">Subscribe for exclusive offers</p>
+            <p class="text-white sm:mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sunt quis
+                obcaecati
+                voluptatibus,
+                pariatur neque consequatur nobis alias explicabo non nemo saepe harum tempora. Autem quibusdam sed iusto
+                laborum reiciendis.</p>
+            <form action="http://localhost:3000/subscriber" method="post" class="sm:ml-35 mt-10">
+
+                <input type="email" name="email" placeholder="Your Email"
+                    class="text-white p-1 sm:p-8 rounded-xl font-bold border-2 hover:bg-neutral-500">
+                <button class="p-1 sm:p-8 rounded-xl font-bold border-2 bg-pink-700 text-white">Submit</button>
+
+            </form>
+        </div>
+        <div class=" sm:w-1/2 h-100 flex gap-18 sm:gap-50 justify-center mt-20 bg-neutral-50">
+            <div>
+                <p class=" font-bold">Support</p>
+                <ul>
+                    <li class="hover:text-neutral-400">Help center</li>
+                    <li class="hover:text-neutral-400">Contact us</li>
+                    <li class="hover:text-neutral-400">Terms of use</li>
+                    <li class="hover:text-neutral-400">Suppliments</li>
+                </ul>
+            </div>
+            <div>
+                <p class=" font-bold">About</p>
+                <ul>
+                    <li class="hover:text-neutral-400">Blog</li>
+                    <li class="hover:text-neutral-400">Review</li>
+                    <li class="hover:text-neutral-400">Testimonial</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="../navbarRoutes/nav02_podcast.js"></script>
+</body>
+
+</html>

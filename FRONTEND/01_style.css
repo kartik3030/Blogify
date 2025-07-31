@@ -1,0 +1,329 @@
+/* NavBar for each html page */
+
+/* bounce animation */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.nav:hover {
+    animation: bounce 1s ease-out 0s forwards;
+}
+
+.signin {
+    font-weight: 500;
+
+}
+
+.signin:hover {
+    color: rgb(169, 72, 72);
+}
+
+
+
+.Blogify {
+    color: brown;
+}
+
+.Blogify:hover {
+    text-shadow: 1px 1px 1px;
+}
+
+
+
+/* INDEX.html */
+
+/* animation for heading */
+@keyframes myAnimation {
+    from {
+        transform: translateX(-100px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0% {
+        width: 0;
+
+    }
+
+    25% {
+        width: 50;
+
+    }
+
+    50% {
+        width: 70;
+
+    }
+
+    100% {
+        width: 100;
+
+    }
+}
+
+@keyframes menuBtn {
+    from {
+        opacity: 0.5;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.menu-list {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    animation: menuBtn 1s ease-in 0s;
+}
+
+.search {
+    animation: slide 1s ease-out 0s;
+}
+
+.best-week.animate {
+    animation: myAnimation 1.5s ease-in-out 0s;
+}
+
+.category.animate {
+    animation: myAnimation 1.5s ease-in-out 0s;
+}
+
+/* animation for boxes on right */
+@keyframes zoom {
+    from {
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1.05);
+
+    }
+}
+
+.mainBanner {
+    animation: bounce 1s ease-in-out forwards;
+}
+
+.green-box:hover {
+    animation: zoom 0.4s ease-in-out forwards;
+}
+
+/* Banners of index.html */
+.card {
+    background-image: url("https://images.nightcafe.studio/jobs/irHHNQ33V20nKZANZgUs/irHHNQ33V20nKZANZgUs--1--5vxsd.jpg?tr=w-1600,c-at_max");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+
+
+.section2 {
+    height: 300px;
+    width: 350px;
+    background: rgb(113, 164, 153);
+}
+
+.model {
+    background: url("https://i.pinimg.com/originals/42/85/6c/42856c1dbb56d288ae634b84310df488.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: 350px;
+    width: 350px;
+}
+
+.blog-card {
+    background: url("https://i.pinimg.com/originals/d5/00/19/d50019728623e8429b6cd74479088f9e.jpg");
+    background-size: cover;
+    padding: 20px;
+    height: 350px;
+    width: 350px;
+}
+
+.blog-card:hover {
+    animation: zoom 0.4s ease-in forwards;
+}
+
+.blog-card2 {
+    background: url("https://i.pinimg.com/originals/c6/7a/d8/c67ad8a0e57d9d87e4503a0205c2ac5e.jpg");
+    background-size: cover;
+
+}
+
+.blog-card2:hover {
+    animation: zoom 0.4s ease-in forwards;
+}
+
+.blog-card3 {
+    background: url("https://c.pxhere.com/photos/e6/c5/model_fashion_girl_fashion_models_fashion_model_young_woman_hair_fashion_model-1369002.jpg!d");
+    background-size: cover;
+    padding: 20px;
+    height: 350px;
+    width: 350px;
+}
+
+.blog-card3:hover {
+    animation: zoom 0.4s ease-in forwards;
+}
+
+/* Footer of index.html*/
+.footer {
+    background: url("https://i.pinimg.com/originals/85/60/d9/8560d91fb0508fe3666fd3c82e4743d6.jpg");
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+/* ARTICLE.html */
+
+.article1 {
+    animation: zoom 1s ease-in 0s;
+}
+
+.art:hover {
+    animation: zoom 0.4s ease-in 0s forwards;
+}
+
+.latest-article.animate {
+    animation: myAnimation 1.5s ease-in-out 0s;
+}
+
+.recent-article.animate {
+    animation: myAnimation 1.5s ease-in-out 0s;
+}
+
+/* Navbar items bold */
+.article-text>li {
+    font-weight: 500;
+}
+
+
+/* Aricle.html */
+
+/* Banners of Article.html */
+.article-img {
+    background: url("https://wallpaperaccess.com/full/436168.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.article1 {
+    background: url("https://swimsuit.si.com/.image/t_share/MTk0NzY0MTQ1NTc1MzM5NTQ0/winter-skincare.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    padding: 20px;
+
+}
+
+.article2 {
+    background: url("https://i.pinimg.com/originals/c6/7a/d8/c67ad8a0e57d9d87e4503a0205c2ac5e.jpg");
+    background-size: cover;
+    padding: 20px;
+    height: 250px;
+    width: 40%;
+}
+
+/* PODCAST.html */
+/* Bannner of Podacast.html */
+.podcast {
+    background: url("https://images.pexels.com/photos/8001286/pexels-photo-8001286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    padding: 20px;
+    height: 500px;
+    width: 70%;
+    background-position: top;
+}
+
+.trending-podcast.animate {
+    animation: myAnimation 1s ease-in 0s;
+}
+
+.new-release.animate {
+    animation: myAnimation 1s ease-in 0s;
+}
+
+/* UPLOAD.html */
+.divPreview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: silver;
+    width: 40%;
+    min-width: 200px;
+    height: fit-content;
+    z-index: 10;
+    border: 2px solid black;
+    margin-top: 100px;
+    margin-right: 5px;
+}
+
+.formBG {
+    background: url("https://www.whatspaper.com/wp-content/uploads/2023/04/red-aesthetic-whatspaper-5.jpg");
+    background-size: cover;
+
+}
+
+.upload-img {
+    background: url("https://webneel.com/daily/sites/default/files/images/project/TiagoHoisel-3d-character-design.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* TALK TO US.html */
+.display {
+    display: block;
+    position: fixed;
+    top: 100px;
+    z-index: 100;
+}
+
+/* SIGN UP.html */
+.signup {
+    background: url("https://cdn.llamagen.ai/web_public/team/kali_20241211.webp");
+    width: 40%;
+    height: 700px;
+    background-position: top;
+    background-size: cover;
+    padding: 10px;
+}
+
+.signup:hover {
+    animation: zoom 1s ease-in 0s alternate forwards;
+}
+
+.signupText:hover {
+    animation: zoom 1s ease-in 0s alternate;
+}
+
+.createAcc {
+    background: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI1LTA2L3NyLWltYWdlLTA5MDYyNS1wYWEwOC1zLTEyMS1wb3N0ZXItbWMzMnVkdm0uanBn.jpg");
+    width: 40%;
+    height: 700px;
+    background-position: top;
+    background-size: cover;
+    padding: 10px;
+}
+
+.createAcc:hover {
+    animation: zoom 1s ease-in 0s alternate forwards;
+}
+
+/* page.ejs */

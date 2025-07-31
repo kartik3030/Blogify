@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- npx @tailwindcss/cli -i ./FRONTEND/input.css -o ./FRONTEND/output.css --watch -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Blog</title>
+    <link rel="stylesheet" href="../01_style.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="fixed top-0 w-97 sm:w-full z-10 bg-white">
+            <ul class=" flex justify-between items-end ">
+                <div class="flex gap-x-7 ">
+                    <div class="logo ml-5 flex items-center">
+                        <li>
+                            <a href="/blogify"><span class="Blogify font-bold text-2xl sm:text-4xl">Blogify</span></a>
+                        </li>
+                    </div>
+                    <div class="gap-x-10 ml-25 article-text hidden sm:flex sm:items-end">
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/article">Articles</a> </li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/podcast">Podcast</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/writer">Be a writer</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/chat">Talk to us</a></li>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mr-5 nav-search items-center">
+                    <li><input type="search" placeholder="Search Here" class="search p-1 w-30 sm:w-100 hidden border-2">
+                    </li>
+                    <li><span class="material-symbols-outlined search-icon">
+                            search
+                        </span></li>
+                    <li class="sm:hidden menu-btn"><span class="material-symbols-outlined">
+                            menu
+                        </span></li>
+                    <li class="signin hidden sm:block nav"><a href="/blogify/signin">Sign in</a></li>
+
+                </div>
+
+            </ul>
+
+
+        </nav>
+        <div class="article-text h-300 w-90 mt-8 text-end  list-none menu-list hidden bg-neutral-50">
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/article">Articles</a> </li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/podcast">Podcast</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/writer">Be a writer</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/chat">Talk to us</a></li>
+            <li class="signin nav text-3xl font-bold mt-7"><a href="/blogify/signin">Sign in</a></li>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="flex gap-5 items-end ml-20 sm:ml-160 mt-30">
+            <div>
+                <img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
+                    alt="img" width="70">
+            </div>
+            <div>
+                <p class="text-3xl font-bold">User Name</p>
+                <button class="flex gap-2 border-2 p-2 mt-1 rounded-2xl hover:bg-gray-100"><span
+                        class="material-symbols-outlined">
+                        manage_accounts </span>Edit Profile</button>
+            </div>
+        </div>
+
+
+        <div class=" mt-30 sm:mt-40 text-neutral-300 ">
+            <hr>
+        </div>
+
+        <div>
+            <div
+                class="w-80 sm:w-100 h-60 border-2 border-neutral-300 rounded-3xl ml-7 mt-5  hover:bg-gray-100 hover:border-black">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                    fill="#F2CDA2" class=" ml-10 sm:ml-40 mt-3 ">
+                    <path
+                        d="M480-480ZM201-79l-42-43 128-128H161v-60h228v228h-60v-125L201-79Zm248-1v-60h291v-460H520v-220H220v450h-60v-450q0-24.75 17.63-42.38Q195.25-880 220-880h340l240 240v500q0 24.75-17.62 42.37Q764.75-80 740-80H449Z" />
+                </svg>
+                <p class="sm:text-2xl font-bold ml-8 sm:ml-23">Upload your shot</p>
+                <p class="m-2 sm:ml-10">Got something to say? Share your story here!</p>
+                <a href="../navbarRoutes/nav03_Upload.html">
+                    <button
+                        class="border-2 p-2 bg-cyan-800 text-white sm:w-60 ml-8 sm:ml-20 rounded-2xl sm:mt-10 upload_btn">Upload</button>
+                </a>
+            </div>
+
+            <div class="mt-5 grid sm:grid-cols-3 gap-y-3 ml-7">
+                <% arr.forEach(blog=> { %>
+
+                    <section
+                        class=" rounded-3xl w-80 sm:w-120  border-2 p-4  border-neutral-300 hover:bg-gray-100 article-click"
+                        data-id="<%= blog.id %>">
+                        <div class="flex gap-x-3">
+                            <img src="/images/<%= blog.filename %>" alt="img"
+                                class="rounded-xl min-h-30 max-h-30 max-w-20 sm:max-w-45">
+                            <div>
+                                <p class="text-2xl font-bold">
+                                    <%= blog.title %>
+                                </p>
+                                <p>
+                                    <%= blog.textarea %>
+                                </p>
+                                <p class="mt-10 font-bold">
+                                    <%= blog.author %>
+                                </p>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <% }) %>
+            </div>
+        </div>
+    </main>
+    <footer class=" mt-10 sm:mt-30 ">
+        <div>
+            <ul class="ml-15 flex gap-x-10 sm:justify-between font-bold items-end m-5">
+                <li class="Blogify text-3xl">Blogify</li>
+                <li class="hover:text-neutral-400 hidden sm:block">For authors</li>
+                <li class="hover:text-neutral-400">Read</li>
+                <li class="hover:text-neutral-400">Blog</li>
+                <li class="hover:text-neutral-400 hidden sm:block">Advertising</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/views/nav03_be_writer.js"></script>
+</body>
+
+
+</html>

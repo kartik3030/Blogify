@@ -1,0 +1,29 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon BACKEND/01_homePage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartik3030/Blogify.git"
+  },
+  "keywords": [],
+  "author": "Kartik",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kartik3030/Blogify/issues"
+  },
+  "homepage": "https://github.com/kartik3030/Blogify#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "tailwindcss": "^4.1.11"
+  }
+}

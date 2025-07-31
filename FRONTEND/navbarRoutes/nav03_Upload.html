@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- npx @tailwindcss/cli -i ./FRONTEND/input.css -o ./FRONTEND/output.css --watch -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Blog</title>
+    <link rel="stylesheet" href="../01_style.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="fixed top-0 w-97 sm:w-full z-10 bg-white">
+            <ul class=" flex justify-between items-end ">
+                <div class="flex gap-x-7 ">
+                    <div class="logo ml-5 flex items-center">
+                        <li>
+                            <a href="/blogify"><span class="Blogify font-bold text-2xl sm:text-4xl">Blogify</span></a>
+                        </li>
+                    </div>
+                    <div class="gap-x-10 ml-25 article-text hidden sm:flex sm:items-end">
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/article">Articles</a> </li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/podcast">Podcast</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/writer">Be a writer</a></li>
+                        <li class="hover:text-indigo-400 nav"><a href="/blogify/chat">Talk to us</a></li>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mr-5 nav-search items-center">
+                    <li><input type="search" placeholder="Search Here" class="search p-1 w-30 sm:w-100 hidden border-2">
+                    </li>
+                    <li><span class="material-symbols-outlined search-icon">
+                            search
+                        </span></li>
+                    <li class="sm:hidden menu-btn"><span class="material-symbols-outlined">
+                            menu
+                        </span></li>
+                    <li class="signin hidden sm:block nav"><a href="/blogify/signin">Sign in</a></li>
+
+                </div>
+
+            </ul>
+
+
+        </nav>
+        <div class="article-text h-300 w-90 mt-8 text-end  list-none menu-list hidden bg-neutral-50">
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/article">Articles</a> </li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/podcast">Podcast</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/writer">Be a writer</a></li>
+            <li class="hover:text-indigo-400 text-3xl font-bold nav mt-7"><a href="/blogify/chat">Talk to us</a></li>
+            <li class="signin nav text-3xl font-bold mt-7"><a href="/blogify/signin">Sign in</a></li>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="main ">
+
+        <div class="mt-20  ml-5  sm:ml-20 flex justify-between ">
+            <div>
+                <button class=" hidden sm:block border-2 p-1 rounded-lg hover:bg-orange-400">Save as draft</button>
+            </div>
+            <div class="flex gap-x-3 mr-5">
+                <button class="border-2 p-1 hover:bg-orange-400 rounded-lg cancel">Cancel</button>
+                <button class=" border-2 p-1 rounded-lg hover:bg-orange-400 continue">Continue</button>
+            </div>
+
+        </div>
+        <div class=" flex justify-center">
+            <h2 class="text-2xl sm:text-4xl font-bold hover:text-fuchsia-600">What's on your mind??</h2>
+        </div>
+
+        <div class="flex justify-between">
+
+
+            <form action="http://localhost:3000/dynamicBlog" method="POST" enctype="multipart/form-data"
+                class="sm:ml-16 border-2 border-dashed w-[600px] mt-10 border-neutral-300 p-10 bg-gray-100">
+
+                <div class="flex items-center mb-4 mt-3">
+                    <input type="text" name="title" placeholder="Enter Title"
+                        class="text-black p-3 w-full rounded-xl font-bold border-2 border-black bg-white" required>
+                </div>
+
+                <div class="flex items-center mb-4 mt-3">
+                    <textarea name="textarea" placeholder="Write here"
+                        class="text-black p-3 w-full h-[200px] rounded-xl font-bold border-2 border-black bg-white"
+                        required></textarea>
+                </div>
+
+                <div class="flex items-center mb-4 mt-3">
+                    <input type="text" name="author" placeholder="Author Name"
+                        class="text-black p-3 w-full rounded-xl font-bold border-2 border-black bg-white" required>
+                </div>
+
+                <div class="flex items-center mb-4 mt-3">
+                    <input type="file" name="file"
+                        class="text-black p-3 w-full rounded-xl font-bold border-2 border-black bg-white" required>
+                </div>
+
+                <button type="submit"
+                    class="p-3 rounded-xl w-full font-bold border-2 hover:bg-red-800 bg-pink-700 text-white border-black">
+                    Submit
+                </button>
+            </form>
+            <div class="upload-img mr-10 w-200 h-140 mt-10 hidden sm:block">
+                <p class="text-5xl font-bold text-white ml-30 mt-120">Use your brain unlike him</p>
+            </div>
+        </div>
+
+    </main>
+    <footer class=" mt-10 sm:mt-30 ">
+        <div>
+            <ul class="ml-15 flex gap-x-10 sm:justify-between font-bold items-end m-5">
+                <li class="Blogify text-3xl">Blogify</li>
+                <li class="hover:text-neutral-400 hidden sm:block">For authors</li>
+                <li class="hover:text-neutral-400">Read</li>
+                <li class="hover:text-neutral-400">Blog</li>
+                <li class="hover:text-neutral-400 hidden sm:block">Advertising</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="nav03_upload.js"></script>
+</body>
+
+</html>

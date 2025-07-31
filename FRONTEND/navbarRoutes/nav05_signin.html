@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- npx @tailwindcss/cli -i ./FRONTEND/input.css -o ./FRONTEND/output.css -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="../01_style.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <main>
+        <div class="form flex ">
+            <form action="#">
+                <h1 class="text-3xl sm:text-5xl font-bold mt-20 ml-15 sm:ml-45"><span
+                        class="hover:text-amber-600">Welcome</span>
+                    <span class="hover:text-indigo-500">To
+                    </span><span class="hover:text-pink-600">Blogify</span>
+                </h1>
+                <p class="ml-20 sm:ml-55 mr-10 mt-7 hover:text-red-500">Already a user? Sign in</p>
+
+                <input type="email" name="email" placeholder="Your Email"
+                    class="text-black p-8 rounded-xl font-bold border-2 border-black ml-10 mr-5 sm:ml-50 mt-10 sm:w-100 hover:bg-neutral-300 email"><br>
+                <input type="password" name="password" placeholder="Your Password"
+                    class="text-black p-8 rounded-xl font-bold border-2 border-black ml-10 mr-5 sm:ml-50 mt-1 sm:w-100 hover:bg-neutral-300 pass"><br>
+                <p><a href="#" class="ml-15 sm:ml-115 hover:text-red-950 font-stretch-50%">Forgot Password? </a></p>
+                <button
+                    class=" p-8 rounded-xl font-bold border-2 bg-pink-700 text-white ml-30 sm:ml-90 mt-5 hover:shadow-2xl submit">Submit</button>
+                <p class="mt-1 ml-40 sm:ml-100">-OR-</p>
+                <p class="ml-30 sm:ml-90 hover:text-red-950"><a href="/blogify/createAccount">Create Account</a></p>
+            </form>
+            <div class="signup  rounded-4xl mt-10 ml-20 hover:shadow-2xl hidden sm:block">
+                <p class="text-3xl ml-5 font-bold text-black p-10 signupText"> Make your reading easier with blogify
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="../navbarRoutes/nav05_signin.js"></script>
+</body>
+
+</html>
