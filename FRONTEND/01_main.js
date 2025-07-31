@@ -65,7 +65,13 @@ model.addEventListener("click", () => {
     })
 })
 
-
+let greenBox = document.querySelector(".green-box")
+greenBox.addEventListener("click",()=>{
+window.scrollTo({
+    top:document.body.scrollHeight,
+    behaviour:"smooth"
+})
+})
 
 
 
