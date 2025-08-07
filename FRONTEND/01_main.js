@@ -56,6 +56,36 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// category images
+ let imgTag = document.querySelector(".img")
+    let right = document.querySelector(".right-arrow")
+    let left = document.querySelector(".left-arrow")
+
+
+    let img2 = "https://tse4.mm.bing.net/th/id/OIP.AUhzGIb2nnj6-UZXXjlo4gHaEO?rs=1&pid=ImgDetMain&o=7&rm=3"
+    let img3 = "https://www.psfc.in/wp-content/uploads/2023/04/1111_n.png"
+    let img4 = "https://tse3.mm.bing.net/th/id/OIP.GvntOdvz80txbfbW4rz2kAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3"
+    let img5 = "https://etimg.etb2bimg.com/photo/81478822.cms"
+
+
+    let imgArr = [img2, img3, img4, img5]
+    let current = 0
+
+    right.addEventListener("click", () => {
+        current++;
+        if (current >= imgArr.length) {
+            current = 0; // Loop back to first image
+        }
+        imgTag.src = imgArr[current];
+    });
+
+    left.addEventListener("click", () => {
+        current--;
+        if (current < 0) {
+            current = imgArr.length - 1; // Loop to last image
+        }
+        imgTag.src = imgArr[current];
+    });
 
 let model = document.querySelector(".model")
 model.addEventListener("click", () => {
