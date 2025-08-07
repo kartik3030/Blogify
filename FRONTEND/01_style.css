@@ -165,7 +165,9 @@
 .blog-card2 {
     background: url("https://i.pinimg.com/originals/c6/7a/d8/c67ad8a0e57d9d87e4503a0205c2ac5e.jpg");
     background-size: cover;
-
+    padding: 20px;
+    height: 350px;
+    width: 350px;
 }
 
 .blog-card2:hover {
