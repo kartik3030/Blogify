@@ -156,7 +156,8 @@
     padding: 20px;
     height: 350px;
     width: 350px;
-    margin-top:5px;
+    margin-top:3px;
+    margin-left:3px;
 }
 
 .blog-card:hover {
@@ -170,6 +171,7 @@
     height: 350px;
     width: 350px;
     margin-top:5px;
+    margin-left:3px;
 }
 
 .blog-card2:hover {
@@ -183,6 +185,7 @@
     height: 350px;
     width: 350px;
     margin-top:5px;
+    margin-left:3px;
 }
 
 .blog-card3:hover {
