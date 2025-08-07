@@ -57,35 +57,7 @@ window.addEventListener("scroll", () => {
 });
 
 // category images
- let imgTag = document.querySelector(".img")
-    let right = document.querySelector(".right-arrow")
-    let left = document.querySelector(".left-arrow")
 
-
-    let img2 = "https://wallpapers.com/images/hd/dark-city-4k-3gzv7hgd8xp1ph2j.jpg"
-    let img3 = "https://i.pinimg.com/736x/04/cb/c0/04cbc0f02df7957fc77b6c5515c32111--room-goals-pictures.jpg"
-    let img4 = "https://tse3.mm.bing.net/th/id/OIP.GvntOdvz80txbfbW4rz2kAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3"
-    let img5 = "https://etimg.etb2bimg.com/photo/81478822.cms"
-
-
-    let imgArr = [img2, img3, img4, img5]
-    let current = 0
-
-    right.addEventListener("click", () => {
-        current++;
-        if (current >= imgArr.length) {
-            current = 0; // Loop back to first image
-        }
-        imgTag.src = imgArr[current];
-    });
-
-    left.addEventListener("click", () => {
-        current--;
-        if (current < 0) {
-            current = imgArr.length - 1; // Loop to last image
-        }
-        imgTag.src = imgArr[current];
-    });
 
 let model = document.querySelector(".model")
 model.addEventListener("click", () => {
